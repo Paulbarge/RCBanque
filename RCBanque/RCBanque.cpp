@@ -10,5 +10,6 @@ int main()
 	cout << "Hello CMake." << endl;
 	cout << "Hello World." << endl;
 	//hehe
+	//haha
 	return 0;
 }
