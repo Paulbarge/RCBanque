@@ -9,5 +9,6 @@ int main()
 {
 	cout << "Hello CMake." << endl;
 	cout << "Hello World." << endl;
+	//hehe
 	return 0;
 }
