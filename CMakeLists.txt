@@ -5,7 +5,7 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("RCBanque")
 
-set(BOOST_DIR C:/tools/Boost/Boost)
+set(BOOST_DIR C:/tools/Boost)
 #set(BOOST_DIR c:/tools/wxWidgets)
 
 # Incluez les sous-projets.
