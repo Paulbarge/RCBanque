@@ -3,7 +3,7 @@
 #
 
 # Ajoutez une source à l'exécutable de ce projet.
-add_executable (RCBanque "RCBanque.cpp"  "compte.cpp" "clients.cpp")
+add_executable (RCBanque "RCBanque.cpp"   "Clients.cpp")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET RCBanque PROPERTY CXX_STANDARD 20)
