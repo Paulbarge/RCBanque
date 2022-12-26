@@ -1,25 +1,29 @@
 using namespace std;
 
-class client {
+
+
+
+class client
+{
 private:
-    int numeroClient;//premet d'identifier le client 
-    //inforation du client
+    int numeroClient; // premet d'identifier le client
+    // inforation du client
     string nom;
     string prenom;
     int dateNaissance;
     int numeroAdresse;
     string adresse;
     int tel;
-
-
-
-
+    // a l'inscription on choisie la somme de chaque compte
+    int compte_courant;
+    int compte_epargne;
+    int interet;
 
 public:
-    //constructeur 
-    client(int, string, string, int, int, string, int);
+    // constructeur
+    client(int, string, string, int, int, string, int, int, int, int);
 
-    //getter
+    // getter
     int numeroClientGet();
     string nomGet();
     string prenomGet();
@@ -27,9 +31,14 @@ public:
     int numeroAdresseGet();
     string adresseGet();
     int telGet();
+    int comptecourantGet();
+    int compteepargneGet();
+    int interetGet();
 
+    // fonction ajoutant les intérêts
+    void addInteret();
 
-    //setter
+    // setter
     void numeroClientSet(int value);
     void nomSet(string value);
     void prenomSet(string value);
@@ -37,8 +46,6 @@ public:
     void numeroAdresseSet(int value);
     void adresseSet(string value);
     void telSet(int value);
-
-
-
+    void comptecourantSet(int value);
+    void compteepargneSet(int value);
 };
-
