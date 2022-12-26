@@ -31,6 +31,9 @@ ptree get_a_ptree_from_a_customer(client &customer) {
     pt.put("numeroAdresse", customer.numeroAdresseGet());
     pt.put("adresse", customer.adresseGet());
     pt.put("tel", customer.telGet());
+    pt.put("compte_courant", customer.comptecourantGet());
+    pt.put("compte_epargne", customer.compteepargneGet());
+    pt.put("", customer.comptecourantGet());
 
    
     /*
@@ -62,7 +65,7 @@ client get_a_customer_from_a_ptree(ptree& pt) {
         account_numbers.push_back(account_number.second.get_value<int>());
     }*/
 
-    client customer(numero_client,Nom,Prenom,dateNaissance,numeroAdresse,adresse,tel);
+    client customer(numero_client,Nom,Prenom,dateNaissance,numeroAdresse,adresse,tel,);
 
     return customer;
 }
