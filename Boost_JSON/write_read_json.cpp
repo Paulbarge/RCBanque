@@ -6,7 +6,7 @@
 #include <SDKDDKVer.h>
 #endif
 
-#include "Customer.hpp"
+#include "RCBanque.hpp"
 
 using boost::property_tree::ptree;
 using boost::property_tree::read_json;
