@@ -1,5 +1,7 @@
 using namespace std;
-
+#include <iostream>
+#include <iomanip>
+#include <string>
 
 
 
@@ -48,4 +50,7 @@ public:
     void telSet(int value);
     void comptecourantSet(int value);
     void compteepargneSet(int value);
+
+    // surcharge operateur
+    friend std::ostream& operator<<(std::ostream& os, const client& customer);
 };

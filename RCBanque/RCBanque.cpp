@@ -1,7 +1,7 @@
 ﻿// RCBanque.cpp : définit le point d'entrée de l'application.
 //
 
-#include "RCBanque.h"
+#include "RCBanque.hpp"
 
 using namespace std;
 
