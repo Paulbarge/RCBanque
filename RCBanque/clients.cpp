@@ -145,13 +145,13 @@ int  client::interetGet1() const
     return (interet);
 }
 std::ostream& operator<<(std::ostream& os,const client& customer) {
-    os << "numero_client" << customer.numeroClientGet1() << std::endl;
-    os << "Nom" << customer.nomGet1() << std::endl;
-    os << "Prenom" << customer.prenomGet1() << std::endl;
-    os << "dateNaissance" << customer.dateNaissanceGet1() << std::endl;
-    os << "numeroAdresse" << customer.numeroAdresseGet1() << std::endl;
-    os << "adresse" << customer.adresseGet1() << std::endl;
-    os << "tel" << customer.telGet1() << std::endl;
+    os << "numero_client: " << customer.numeroClientGet1() << std::endl;
+    os << "Nom: " << customer.nomGet1() << std::endl;
+    os << "Prenom: " << customer.prenomGet1() << std::endl;
+    os << "dateNaissance: " << customer.dateNaissanceGet1() << std::endl;
+    os << "numeroAdresse: " << customer.numeroAdresseGet1() << std::endl;
+    os << "adresse: " << customer.adresseGet1() << std::endl;
+    os << "tel: " << customer.telGet1() << std::endl;
     os << "compte_courant" << customer.comptecourantGet1() << std::endl;
     os << "compte_epargne" << customer.compteepargneGet1() << std::endl;
     os << "interet" << customer.interetGet1() << std::endl;
