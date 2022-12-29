@@ -10,7 +10,6 @@ if(MSVC)
     add_compile_options($<$<CONFIG:Release>:/MT> # Runtime library: Multi-threaded
                       $<$<CONFIG:Debug>:/MTd> # Runtime library: Multi-threaded Debug
                       )
-    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
     set(Boost_USE_STATIC_RUNTIME ON)
 	set(Boost_DIR "C:/tools/Boost/lib/cmake/Boost-1.80.0")
 
@@ -22,5 +21,5 @@ find_package(Boost 1.80.0 COMPONENTS json serialization REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 
 set(write_read_json_src write_read_json.cpp)
-add_executable(write_read_json ${write_read_json_src} "wrjson.cpp")
+add_executable(write_read_json ${write_read_json_src})
 target_link_libraries (write_read_json LINK_PUBLIC customer ${Boost_LIBRARIES})

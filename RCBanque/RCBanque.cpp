@@ -7,8 +7,8 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello CMake." << endl;
-	cout << "Hello World." << endl;
+	cout << "Hello rcbanque" << endl;
+	
 	//hehe
 	//haha
 	return 0;

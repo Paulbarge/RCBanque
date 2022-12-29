@@ -100,4 +100,18 @@ void client::comptecourantSet(int value)
 void client::compteepargneSet(int value)
 {
     compte_epargne = value;
+
+}
+std::ostream& operator<<(std::ostream& os,client& customer) {
+    os << "numero_client" << customer.numeroClientGet() << std::endl;
+    os << "Nom" << customer.nomGet() << std::endl;
+    os << "Prenom" << customer.prenomGet() << std::endl;
+    os << "dateNaissance" << customer.dateNaissanceGet() << std::endl;
+    os << "numeroAdresse" << customer.numeroAdresseGet() << std::endl;
+    os << "adresse" << customer.adresseGet() << std::endl;
+    os << "tel" << customer.telGet() << std::endl;
+    os << "compte_courant" << customer.comptecourantGet() << std::endl;
+    os << "compte_epargne" << customer.compteepargneGet() << std::endl;
+    os << "interet" << customer.interetGet() << std::endl;
+    return os;
 }
