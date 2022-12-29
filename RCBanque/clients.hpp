@@ -37,6 +37,17 @@ public:
     int compteepargneGet();
     int interetGet();
 
+    //version const
+    int numeroClientGet1() const;
+    string  nomGet1() const;
+    string prenomGet1() const ;
+    int  dateNaissanceGet1() const;
+    int  numeroAdresseGet1() const;
+    string   adresseGet1() const;
+    int  telGet1() const;
+    int  comptecourantGet1() const;
+    int  compteepargneGet1() const;
+    int  interetGet1() const;
     // fonction ajoutant les intérêts
     void addInteret();
 

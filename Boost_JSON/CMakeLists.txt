@@ -20,6 +20,6 @@ endif (MSVC)
 find_package(Boost 1.80.0 COMPONENTS json serialization REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 
-set(write_read_json_src write_read_json.cpp)
+set(write_read_json_src write_read_json.cpp ../RCBanque/clients.cpp)
 add_executable(write_read_json ${write_read_json_src})
 target_link_libraries (write_read_json LINK_PUBLIC customer ${Boost_LIBRARIES})
