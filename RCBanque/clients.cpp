@@ -5,14 +5,14 @@
 using namespace std;
 
 // constructeur
-client::client(int numC, string name1, string name2, int date, int numAd, string ad, int numTel, int courant, int epargne, int interet)
+client::client(int numC, string name1, string name2, int date, int numTel, int courant, int epargne, int interet)
 {
     this->numeroClient = numC;
     this->nom = name1;
     this->prenom = name2;
     this->dateNaissance = date;
-    this->numeroAdresse = numAd;
-    this->adresse = ad;
+    //this->numeroAdresse = numAd;
+   // this->adresse = ad;
     this->tel = numTel;
     this->compte_courant = courant;
     this->compte_epargne = epargne;
@@ -34,14 +34,6 @@ string client::prenomGet()
 int client::dateNaissanceGet()
 {
     return (dateNaissance);
-}
-int client::numeroAdresseGet()
-{
-    return (numeroAdresse);
-}
-string client::adresseGet()
-{
-    return (adresse);
 }
 int client::telGet()
 {
@@ -81,14 +73,6 @@ void client::dateNaissanceSet(int value)
 {
     dateNaissance = value;
 }
-void client::numeroAdresseSet(int value)
-{
-    numeroAdresse = value;
-}
-void client::adresseSet(string value)
-{
-    adresse = value;
-}
 void client::telSet(int value)
 {
     tel = value;
@@ -116,17 +100,9 @@ string client::prenomGet1() const
 {
     return (prenom);
 }
-int  client::dateNaissanceGet1()const
+int  client::dateNaissanceGet1() const
 {
     return (dateNaissance);
-}
-int  client::numeroAdresseGet1()const
-{
-    return (numeroAdresse);
-}
-string  client::adresseGet1()const
-{
-    return (adresse);
 }
 int  client::telGet1() const
 {
@@ -149,8 +125,8 @@ std::ostream& operator<<(std::ostream& os,const client& customer) {
     os << "Nom: " << customer.nomGet1() << std::endl;
     os << "Prenom: " << customer.prenomGet1() << std::endl;
     os << "dateNaissance: " << customer.dateNaissanceGet1() << std::endl;
-    os << "numeroAdresse: " << customer.numeroAdresseGet1() << std::endl;
-    os << "adresse: " << customer.adresseGet1() << std::endl;
+   // os << "numeroAdresse: " << customer.numeroAdresseGet1() << std::endl;
+   // os << "adresse: " << customer.adresseGet1() << std::endl;
     os << "tel: " << customer.telGet1() << std::endl;
     os << "compte_courant" << customer.comptecourantGet1() << std::endl;
     os << "compte_epargne" << customer.compteepargneGet1() << std::endl;

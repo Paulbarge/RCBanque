@@ -27,8 +27,8 @@ ptree get_a_ptree_from_a_customer(client &customer) {
     pt.put("Nom", customer.nomGet());
     pt.put("Prenom", customer.prenomGet());
     pt.put("dateNaissance", customer.dateNaissanceGet());
-    pt.put("numeroAdresse", customer.numeroAdresseGet());
-    pt.put("adresse", customer.adresseGet());
+   // pt.put("numeroAdresse", customer.numeroAdresseGet());
+   // pt.put("adresse", customer.adresseGet());
     pt.put("tel", customer.telGet());
     pt.put("compte_courant", customer.comptecourantGet());
     pt.put("compte_epargne", customer.compteepargneGet());
@@ -45,8 +45,8 @@ client get_a_customer_from_a_ptree(ptree& pt) {
     string Prenom = pt.get<string>("Prenom");
     int dateNaissance = pt.get<int>("dateNaissance");
 
-    int numeroAdresse = pt.get<int>("numeroAdresse");
-    string adresse = pt.get<string>("adresse"); 
+    //int numeroAdresse = pt.get<int>("numeroAdresse");
+    //string adresse = pt.get<string>("adresse"); 
     int tel = pt.get<int>("tel", 0);
 
     int compte_courant = pt.get<int>("compte_courant", 0);
@@ -55,7 +55,7 @@ client get_a_customer_from_a_ptree(ptree& pt) {
 
 
 
-    client customer(numero_client,Nom,Prenom,dateNaissance,numeroAdresse,adresse,tel,compte_courant,compte_epargne,interet);
+    client customer(numero_client,Nom,Prenom,dateNaissance,tel,compte_courant,compte_epargne,interet);
 
     return customer;
 }
@@ -66,9 +66,9 @@ int main(int argc, char** argv) {
     ptree pt_accounts;
 
     try {
-        client customer1(1001, "Barge","Paul",13092003,2,"alle du s",0652270107,200,300,3);
+        client customer1(1001, "Barge","Paul",13092003,0652270107,200,300,3);
 
-        client customer2(1002, "simon", "bernard", 12042001,3,"rue vauband",0624522701, 1200, 300, 5);
+        client customer2(1002, "simon", "bernard", 12042001,0624522701, 1200, 300, 5);
  
 
         pt_accounts.push_back({ "", get_a_ptree_from_a_customer(customer1) });
