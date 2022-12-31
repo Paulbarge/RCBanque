@@ -195,19 +195,31 @@ vector<client> json_to_vector3() {
 
 
 vector<string> separationvirement(string enter) {
+
+    
     string delimiter = "/";
-    string token = enter.substr(0, enter.find(delimiter));
-    int nbvir = atoi(token.c_str());
-    int i = 0;
+    string token1 = enter.substr(0, enter.find(delimiter));
+    int nbvir = atoi(token1.c_str());
+    enter.erase(0, token1.length()+1);
+    
     vector<string> sortie;
-    while (i!=nbvir){
-        string delimiter2 = "/";
-        string token2 = enter.substr(0, enter.find(delimiter2));
-        sortie.push_back()
+
+    size_t pos = 0;
+    string token;
+    int x = 0;
+    while (x != nbvir) {
+        pos = enter.find(delimiter);
+        token = enter.substr(0, pos);
+        cout << token << endl;
+        sortie.push_back(token);
+        enter.erase(0, pos + 1);
+        x++;
     }
+    return sortie;
 }
 int numagence(string enter) {
     string delimiter = ",";
+
     string token = enter.substr(0, enter.find(delimiter)); 
     int sortie = atoi(token.c_str());
     sortie = sortie % 1000;
@@ -248,16 +260,18 @@ int main(int argc, char** argv) {
     ptree pt_test;
 
     try {
-        client customer1(1003, "bonjour","bochu",13092003,0652270107,200,300,3);
-        
-        
+        client customer1(1003, "bonjour", "bochu", 13092003, 0652270107, 200, 300, 3);
+
+
 
         string a = "2003,211";
+
+        string strvir = "4/1002,200/1003,300/1004,200/1005,200";
 
         virement(customer1, a);
 
         cout << customer1 << endl;
-        
+
 
 
 
@@ -265,11 +279,11 @@ int main(int argc, char** argv) {
         add_customer2(customer1);
         add_customer3(customer1);
 
-        
+
         vector<client> ca = json_to_vector2();
         vector<client> cb = json_to_vector3();
 
-       
+
         for (int i = 0; i < 2; i++) {
             cout << ca[i] << endl;
         }
@@ -280,13 +294,17 @@ int main(int argc, char** argv) {
         int n = numagence(a);
         int b = numclient(a);
         int w = sommevirement(a);
+
+        vector<string> vir = separationvirement(strvir);
+
         cout << n << std::endl;
         cout << b << std::endl;
         cout << w << std::endl;
 
-
+        for (int i = 0; i < 4; i++) {
+            cout << vir[i] << endl;
+        }
     }
-
     catch (std::exception& e) {
         // Other errors
     }
