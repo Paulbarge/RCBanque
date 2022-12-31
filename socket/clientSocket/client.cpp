@@ -84,6 +84,7 @@ void fonctionnementComplet(/*tcp::socket& socket*/) {
 }
 
 
+
 bool momentInterets() {
     cout << "Hehe les interets" << endl;
     cout << "timestamp : " << time(NULL) << endl;
