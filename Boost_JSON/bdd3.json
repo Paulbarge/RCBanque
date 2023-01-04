@@ -1,0 +1,24 @@
+{
+    "Customers": [
+        {
+            "numero_client": "3000",
+            "Nom": "test",
+            "Prenom": "jsp",
+            "dateNaissance": "0",
+            "tel": "0",
+            "compte_courant": "0",
+            "compte_epargne": "0",
+            "interet": "0"
+        },
+        {
+            "numero_client": "1003",
+            "Nom": "bonjour",
+            "Prenom": "bochu",
+            "dateNaissance": "13092003",
+            "tel": "111767623",
+            "compte_courant": "200",
+            "compte_epargne": "300",
+            "interet": "3"
+        }
+    ]
+}

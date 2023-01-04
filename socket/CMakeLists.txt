@@ -21,21 +21,21 @@ find_package(Boost 1.80.0 COMPONENTS system thread regex serialization REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS} ../thread)
 link_directories(${Boost_LIBRARY_DIRS})
 
-set(server_src server/socket_example_server.cpp "../thread/some_defines.cpp")
-add_executable(server ${server_src})
-set_property(TARGET server PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-target_link_libraries(server LINK_PUBLIC ${Boost_LIBRARIES})
+#set(server_src server/socket_example_server.cpp "../thread/some_defines.cpp")
+#add_executable(server ${server_src} "clientSocket/client.cpp" "clientSocket/client.h")
+#set_property(TARGET server PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+#target_link_libraries(server LINK_PUBLIC ${Boost_LIBRARIES})
 
-set(client_src client/socket_example_client.cpp "../thread/some_defines.cpp")
-add_executable(client ${client_src})
-set_property(TARGET client PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-target_link_libraries(client LINK_PUBLIC ${Boost_LIBRARIES})
+#set(client_src client/socket_example_client.cpp "../thread/some_defines.cpp")
+#add_executable(client ${client_src} "clientSocket/client.cpp" "clientSocket/client.h")
+#set_property(TARGET client PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+#target_link_libraries(client LINK_PUBLIC ${Boost_LIBRARIES})
 
 
-set(run_client_instances_src run_client_instances/run_client_instances.cpp "../thread/some_defines.cpp")
-add_executable(run_client_instances ${run_client_instances_src})
-target_link_libraries(run_client_instances LINK_PUBLIC ${Boost_LIBRARIES})
-set_property(TARGET run_client_instances PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+#set(run_client_instances_src run_client_instances/run_client_instances.cpp "../thread/some_defines.cpp")
+#add_executable(run_client_instances ${run_client_instances_src} "clientSocket/client.cpp" "clientSocket/client.h")
+#target_link_libraries(run_client_instances LINK_PUBLIC ${Boost_LIBRARIES})
+#set_property(TARGET run_client_instances PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 # set(server_customer_src client_customer/server_customer.cpp client_customer/send_receive.cpp)
 # add_executable(server_customer ${server_customer_src})
@@ -52,3 +52,7 @@ set_property(TARGET run_client_instances PROPERTY MSVC_RUNTIME_LIBRARY "MultiThr
 # set(test_socket_client_src test_socket/blocking_tcp_echo_client.cpp)
 # add_executable(blocking_tcp_echo_client ${test_socket_client_src})
 # target_link_libraries (blocking_tcp_echo_client LINK_PUBLIC customer ${Boost_LIBRARIES})
+
+
+add_subdirectory(clientSocket)
+add_subdirectory(serveurSocket)
