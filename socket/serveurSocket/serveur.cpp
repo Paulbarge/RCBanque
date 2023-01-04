@@ -258,15 +258,6 @@ int main()
         boost::asio::write(socket, boost::asio::buffer(msgRenvoi), error);
         boost::asio::write(socket, boost::asio::buffer(message2), error);
 
-        //verifErreur(error, msgRenvoi);
-
-        /*newClient client1;
-        client1.setNameClient("ClemenceServeur");
-        const string msg3 = (string)client1.getNameClient();
-
-        boost::asio::write(socket, boost::asio::buffer(msg3), error);
-        verifErreur(error, msg3);*/
-
 
 
 
