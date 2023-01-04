@@ -12,7 +12,7 @@ endif (MSVC)
 find_package(wxWidgets REQUIRED COMPONENTS net core base)
 include(${wxWidgets_USE_FILE})
 
-//mettre a jour
+#mettre a jour
 add_executable(myapp myapp.cpp)
 
 if(MSVC)
